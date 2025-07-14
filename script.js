@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!targetSection) return;
 
       // Scroll to the section with offset for sticky navbar
-      const yOffset = -129; // Adjust to navbar height
+      const yOffset = -135; // Adjust to navbar height
       const y = targetSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
       window.scrollTo({
