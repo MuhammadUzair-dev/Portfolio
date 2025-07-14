@@ -17,6 +17,10 @@ This is my personal portfolio website built using HTML, CSS, and JavaScript. It 
 - JavaScript (Vanilla)
 - GitHub Pages (for hosting)
 
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE)
+
 #### **Author & Contact**
 ```md
 ## 🙋‍♂️ Author
