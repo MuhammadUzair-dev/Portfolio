@@ -204,28 +204,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // prevent page reload
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
 
-    const form = e.target;
-    const status = document.getElementById('form-status');
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault(); // Prevent default form redirect
 
-    fetch(form.action, {
-      method: form.method,
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => {
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xovlazle", {
+        method: "POST",
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
+
       if (response.ok) {
-        status.textContent ="Message sent successfully!";
+        status.textContent = "✅ Message sent successfully!";
+        status.style.color = "green";
         form.reset();
       } else {
-        status.textContent = "Failed to send message. Try again.";
+        const data = await response.json();
+        status.textContent = data.errors ? data.errors.map(e => e.message).join(", ") : "❌ Submission failed.";
+        status.style.color = "red";
       }
-    })
-    .catch(() => {
-      status.textContent = "Error sending message.";
-    });
+    } catch (error) {
+      status.textContent = "❌ Network error. Please try again.";
+      status.style.color = "red";
+    }
   });
