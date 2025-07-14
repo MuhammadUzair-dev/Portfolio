@@ -17,7 +17,7 @@ This is my personal portfolio website built using HTML, CSS, and JavaScript. It 
 - JavaScript (Vanilla)
 - GitHub Pages (for hosting)
 
-#### 8. **Author & Contact**
+#### **Author & Contact**
 ```md
 ## 🙋‍♂️ Author
 
