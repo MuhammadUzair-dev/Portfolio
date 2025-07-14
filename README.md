@@ -23,4 +23,4 @@ This is my personal portfolio website built using HTML, CSS, and JavaScript. It 
 
 - Portfolio: [muhammaduzair-dev.github.io/Portfolio](https://muhammaduzair-dev.github.io/Portfolio)
 - GitHub: [@MuhammadUzair-dev](https://github.com/MuhammadUzair-dev)
-- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/your-profile/)
+- LinkedIn: [Muhammad Uzair](https://www.linkedin.com/in/muhammad-uzair-291755332)
